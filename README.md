@@ -13,11 +13,11 @@ Control panel will make query to machine every few seconds which returns informa
 - Honeywell HIH-4030/31 humidity sensor support (Or any other linear model)
 
 ## API
-```[GET] /vallox``` all Vallox protocol variables which were intercepted + RTOS task data
-```[GET] /measure``` Humidity, external temperature data
-```[GET] /setfan/<fanspeed>``` Method for setting FAN speed. This is GET request so it can be done using browser
-```[GET] /getparam/<variable>``` Query for asking externally controller parameters
-```[GET] /setparam/<variable>/<newvalue>``` Setter for parameters
+- `[GET] /vallox` all Vallox protocol variables which were intercepted + RTOS task data
+- `[GET] /measure` Humidity, external temperature data
+- `[GET] /setfan/<fanspeed>` Method for setting FAN speed. This is GET request so it can be done using browser
+- `[GET] /getparam/<variable>` Query for asking externally controller parameters
+- `[GET] /setparam/<variable>/<newvalue>` Setter for parameters
 
 Externally controlled parameters (default parameter range):
 ```
@@ -33,5 +33,6 @@ penalty_timer //Time waited after boosting ends in minutes min=0, max=255, defau
 fan_base_speed_winter //Fan speed in winter conditions, min=2, max=8, default=3
 fan_boost_speed_winter //Fan boost speed in winter conditions, min=2, max=8, default=5
 ```
+Example `/setparam/fan_boost_speed_winter/6` will change winter boost speed to 6.
 
 
