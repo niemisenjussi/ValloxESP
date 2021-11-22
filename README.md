@@ -4,6 +4,7 @@ Vallox Digit 2 SE (2010) -ventilation machine protocol reader. Vallox uses RS-48
 Control panel will make query to machine every few seconds which returns information back to control panel. This arduino code will intercept that communication and collect all well known packets from ventilation machine to control panel.
 
 ## Features
+- RTOS based code, multicore
 - Collect all communication packets between controller and ventilation machine
 - Parse all temperature and fan speed information
 - Parse alarm flags
@@ -11,6 +12,7 @@ Control panel will make query to machine every few seconds which returns informa
 - Monitor pre-heater and after-heater usage
 - Support for external 1-wire DS18B20 sensor
 - Honeywell HIH-4030/31 humidity sensor support (Or any other linear model)
+- ESP Aruino OTA update (upload sketch over wlan)
 
 ## API
 - `[GET] /vallox` all Vallox protocol variables which were intercepted + RTOS task data
@@ -33,6 +35,14 @@ Externally controlled parameters (default parameter range):
 - `fan_boost_speed_winter` Fan boost speed in winter conditions, min=2, max=8, default=5
 
 Example `/setparam/fan_boost_speed_winter/6` will change winter boost speed to 6.
+
+# Integration
+- Grafana can be used for data visialization. ESP32 does not store any history data and it must be collected to some database (example. postgresql or influx):
+- Example what ventilation machine air temperatures look like
+- Overlay when afterheater is activated
+![image](https://user-images.githubusercontent.com/25570029/142921646-6424b55f-1a2e-4172-84b2-2a8c187c6f9c.png)
+- Fan speed with after heater
+![image](https://user-images.githubusercontent.com/25570029/142921984-137a0602-9df4-4f3b-9450-6811e9b3fe4e.png)
 
 
 # Example queries
