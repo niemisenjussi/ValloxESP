@@ -37,7 +37,7 @@ Externally controlled parameters (default parameter range):
 Example `/setparam/fan_boost_speed_winter/6` will change winter boost speed to 6.
 
 # Integration
-- Grafana can be used for data visialization. ESP32 does not store any history data and it must be collected to some database (example. postgresql or influx):
+- Grafana can be used for data visualization. ESP32 does not store any history data and it must be collected to some database (example. postgresql or influx):
 - Example what ventilation machine air temperatures look like
 - Overlay when afterheater is activated
 ![image](https://user-images.githubusercontent.com/25570029/142921646-6424b55f-1a2e-4172-84b2-2a8c187c6f9c.png)
