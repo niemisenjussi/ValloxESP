@@ -13,11 +13,11 @@ Control panel will make query to machine every few seconds which returns informa
 - Honeywell HIH-4030/31 humidity sensor support (Or any other linear model)
 
 ## API
-`[GET] /vallox` all Vallox protocol variables which were intercepted + RTOS task data
-`[GET] /measure` Humidity, external temperature data
-`[GET] /setfan/<fanspeed>` Method for setting FAN speed. This is GET request so it can be done using browser
-`[GET] /getparam/<variable>` Query for asking externally controller parameters
-`[GET] /setparam/<variable>/<newvalue>` Setter for parameters
+```[GET] /vallox``` all Vallox protocol variables which were intercepted + RTOS task data
+```[GET] /measure``` Humidity, external temperature data
+```[GET] /setfan/<fanspeed>``` Method for setting FAN speed. This is GET request so it can be done using browser
+```[GET] /getparam/<variable>``` Query for asking externally controller parameters
+```[GET] /setparam/<variable>/<newvalue>``` Setter for parameters
 
 Externally controlled parameters (default parameter range):
 ```
