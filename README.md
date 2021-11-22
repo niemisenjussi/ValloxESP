@@ -20,19 +20,18 @@ Control panel will make query to machine every few seconds which returns informa
 - `[GET] /setparam/<variable>/<newvalue>` Setter for parameters
 
 Externally controlled parameters (default parameter range):
-```
-fan_boost_time //Maximum boost time in minutes, min=0, max=255, default=60
-fan_boost_speed //Fan boost speed when boosting is active, min=3, max=8, default=4
-fan_min_boost_time //Minimum boost time in minutes, min=0, max=255, default=10
-rh_boost_start //Relative humidity when boosting is started, min=10%, max=100%, default=40%
-rh_boost_stop //Relative humidity when boosting is stopped, min=10%, max=100%, default=30%
-rh_hysteresis //Relative humidity hysteresis, min=0, max=20, default=5
-control_enabled //Global flag if ESP controls fan speed min=0, max=1, default=1
-fan_base_speed //Fan base speed, min=3, max=8, default=4
-penalty_timer //Time waited after boosting ends in minutes min=0, max=255, default=15
-fan_base_speed_winter //Fan speed in winter conditions, min=2, max=8, default=3
-fan_boost_speed_winter //Fan boost speed in winter conditions, min=2, max=8, default=5
-```
+- `fan_boost_time` Maximum boost time in minutes, min=0, max=255, default=60
+- `fan_boost_speed` Fan boost speed when boosting is active, min=3, max=8, default=4
+- `fan_min_boost_time` Minimum boost time in minutes, min=0, max=255, default=10
+- `rh_boost_start` Relative humidity when boosting is started, min=10%, max=100%, default=40%
+- `rh_boost_stop` Relative humidity when boosting is stopped, min=10%, max=100%, default=30%
+- `rh_hysteresis` Relative humidity hysteresis, min=0, max=20, default=5
+- `control_enabled` Global flag if ESP controls fan speed min=0, max=1, default=1
+- `fan_base_speed` Fan base speed, min=3, max=8, default=4
+- `penalty_timer` Time waited after boosting ends in minutes min=0, max=255, default=15
+- `fan_base_speed_winter` Fan speed in winter conditions, min=2, max=8, default=3
+- `fan_boost_speed_winter` Fan boost speed in winter conditions, min=2, max=8, default=5
+
 Example `/setparam/fan_boost_speed_winter/6` will change winter boost speed to 6.
 
 
